@@ -19,5 +19,12 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/userinfo', 'UserController@index');
-Route::post('/userinfo', 'UserController@store');
+Route::get('/intro', function () {
+	return view('intro');
+});
+//Route::get('/userinfo', 'UserController@index');
+//Route::post('/userinfo', 'UserController@store');
+//Route::patch('/userinfo/update', 'UserController@update');
+Route::get('/products', 'ProductController@productindex');
+
+//Route::get('/order')

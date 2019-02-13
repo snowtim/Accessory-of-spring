@@ -1,3 +1,4 @@
+@extends('layouts.app')
 <!DOCTYPE html>
 
 	<html>
@@ -10,40 +11,46 @@
 
 	<body>
 
+@section('content')
 		<h1>Register your information</h1>
 			
-		<form method="POST">
+		<form method="POST" action="/userinfo">
+			{{ csrf_field() }}
 
-			<div>
-				<input type="text" name="user_id" placeholder="Your user ID">
+			<div class="field">
+				<div class="control">
+					User ID : <input type="text" name="user_id" placeholder="Your user ID">
+				</div>
 			</div>
 
 			<div>
-				<input type="text" name="name" placeholder="Your name">
+				Name : <input type="text" name="name" placeholder="Your name">
 			</div>
 
 			<div>
-				<input type="text" name="email" placeholder="Your email">
+				E-mail : <input type="text" name="email" placeholder="Your email">
 			</div>
 
 			<div>
-				<input type="" name="sex">
+				Sex:
+				Male<input type="radio" name="sex" value="1">
+				Female<input type="radio" name="sex" value="0">
 			</div>
 
 			<div>
-				<input type="text" name="birthday" placeholder="Your birthday">
+				Birthday : <input type="text" name="birthday" placeholder="Your birthday">
 			</div>
 
 			<div>
-				<input type="text" name="phone" placeholder="Your phone">
+				Phone number : <input type="text" name="phone" placeholder="Your phone">
 			</div>
 
 			<div>
-				<input type="text" name="address" placeholder="Your address">
+				Address : <input type="text" name="address" placeholder="Your address">
 			</div>
 
 			<div>
-				<input type="text" name="password" placeholder="password">
+				Password : <input type="text" name="password" placeholder="password">
 			</div>
 
 			<div>
@@ -53,3 +60,4 @@
 	</body>
 
 </form>
+@endsection
