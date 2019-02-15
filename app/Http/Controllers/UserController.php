@@ -14,7 +14,7 @@ class UserController extends Controller
 
     }
 
-    public function store(Request $request) {
+    /*public function store(Request $request) {
 
      	$validator = Validator::make($request->all(),[
     		'user_id' => 'required|string',
@@ -51,7 +51,7 @@ class UserController extends Controller
     			->update();
     	//$result->update();	
 
-    }
+    }*/
 
     public function delete() {
 

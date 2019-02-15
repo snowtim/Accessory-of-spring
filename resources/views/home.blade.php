@@ -14,7 +14,23 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    Member information
+
+                    <ul>
+                         Name : <a>{{ Auth::user()->name }}</a></br>
+                         E-mail : <a>{{ Auth::user()->email}}</a></br>
+                         User ID : <a>{{ Auth::user()->user_id}}</a></br>
+                         Sex : <a>
+                                    @if((Auth::user()->sex) == 1)
+                                        male
+                                    @else
+                                        female
+                                    @endif
+                                </a></br>
+                         Birthday : <a>{{ Auth::user()->birthday}}</a></br>
+                         Phone : <a>{{ Auth::user()->phone}}</a></br>
+                         Address : <a>{{ Auth::user()->address}}</a></br>
+                    </ul>
                 </div>
             </div>
         </div>

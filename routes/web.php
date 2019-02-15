@@ -26,5 +26,10 @@ Route::get('/intro', function () {
 //Route::post('/userinfo', 'UserController@store');
 //Route::patch('/userinfo/update', 'UserController@update');
 Route::get('/products', 'ProductController@productindex');
+Route::get('/products/create', 'ProductController@create');
+Route::patch('/products/create', 'ProductController@update');
+Route::get('/products/{product}', 'ProductController@show');
+Route::get('/products/{product}/edit', 'ProductController@edit');
+Route::delete('/products/{product}/edit', 'ProductController@delete');
 
 //Route::get('/order')

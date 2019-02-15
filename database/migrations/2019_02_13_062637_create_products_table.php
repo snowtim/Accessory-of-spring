@@ -19,7 +19,7 @@ class CreateProductsTable extends Migration
             $table->string('product_name');
             $table->string('description');
             $table->integer('price');
-            $table->string('order_id');
+            $table->string('order_id')->nullable();
             $table->timestamps();
         });
     }
