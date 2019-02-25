@@ -5,7 +5,6 @@
 	<h1>Create Product Information</h1>
 
 		<form method="POST" action="/products/create">
-			@method('PATCH')
 			@csrf
 
 			<div class="field">
@@ -45,5 +44,7 @@
 					<button type="submit">Create</button>
 				</div>				
 			</div>
+
+		</form>
 
 @endsection
